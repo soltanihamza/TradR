@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>items list</h1>
+
+<table>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Owner
+        </th>
+    </tr>
+    <tr th:each="item : ${items}">
+        <td th:text="${item.id}">123</td>
+        <td th:text="${item.name}">name</td>
+        <td th:text="${item.type}">phhhh</td>
+        <td th:text="${item.owner.mail}">phd</td>
+    </tr>
+</table>
+</body>
+</html>
