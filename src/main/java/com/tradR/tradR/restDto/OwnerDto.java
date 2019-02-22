@@ -1,13 +1,11 @@
-package com.tradR.api.domain;
+package com.tradR.tradR.restDto;
 
 import com.tradR.tradR.models.Item;
 
-import javax.persistence.OneToMany;
-import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class User implements Serializable {
+public class OwnerDto {
 
     private String firstName;
     private String lastName;
@@ -16,17 +14,16 @@ public class User implements Serializable {
     private long phone;
     private String adress;
 
-    public User() {
+    public OwnerDto() {
     }
 
-    public User(String firstName, String lastName, String mail, String password, long phone, String adress) {
+    public OwnerDto(String firstName, String lastName, String mail, String password, long phone, String adress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mail = mail;
         this.password = password;
         this.phone = phone;
         this.adress = adress;
-
     }
 
     public String getFirstName() {
@@ -76,5 +73,4 @@ public class User implements Serializable {
     public void setAdress(String adress) {
         this.adress = adress;
     }
-
 }
